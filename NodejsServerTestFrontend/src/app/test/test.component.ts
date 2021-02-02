@@ -20,4 +20,16 @@ export class TestComponent implements OnInit {
       console.log(res);
     });
   }
+
+  getLbryVersionWithCurl = () => {
+    this.httpClient.get('http://localhost:8080/api/lbry/curl/version').subscribe(res => {
+      console.log(res);
+    });
+  }
+
+  getLbryVersionWithHttp = () => {
+    this.httpClient.get('http://localhost:8080/api/lbry/http/version').subscribe(res => {
+      console.log(res);
+    });
+  }
 }
