@@ -32,4 +32,16 @@ export class TestComponent implements OnInit {
       console.log(res);
     });
   }
+
+  getAccountListWithCurl = () => {
+    this.httpClient.get('http://localhost:8080/api/lbry/curl/accountList').subscribe(res => {
+      console.log(res);
+    });
+  }
+
+  getChannelListWithCurl= () => {
+    this.httpClient.get('http://localhost:8080/api/lbry/curl/channelList').subscribe(res => {
+      console.log(res);
+    });
+  }
 }
